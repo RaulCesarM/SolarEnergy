@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=MonteCarlo&display=swap');
+
+
+/* .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f5f5f5;
+    margin-left: 0px;
+    margin-bottom: 0px
+} */
+
+
+
+.bold {
+    font-family: 'Roboto', sans-serif, 'MonteCarlo';
+    font-weight: bold;
+    font-weight: 500;
+    font-size: 24px;
+    color: #000000;
+    text-align: center;
+    line-height: 31.65px;
+
+}
+
+input {
+    max-width: 400px;
+    padding-right: 0px;
+    margin: 0px;
+    background-color: #f5f5f5;
+    margin-bottom: 15px;
+
+
+}
+span{
+    background-color: #f5f5f5;
+    margin-bottom: 15px;
+}
+
+.colorButton{
+    color:#4CBC9A;
+    background-color: #4CBC9A;
+    border-color: #4CBC9A;
+    margin: 0px;
+    border-radius: 5px;
+    color:white;
+}

@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500');
+
+body {
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
+
+/* Toggle Styles */
+
+#viewport {
+    padding-left: 250px;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#content {
+    width: 100%;
+    position: relative;
+    margin-right: 0;
+}
+
+/* Sidebar Styles */
+
+#sidebar {
+    z-index: 1000;
+    position: fixed;
+    left: 250px;
+    width: 250px;
+    height: 100%;
+    margin-left: -250px;
+   
+    background:#FFFFFF ;
+    /* -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease; */
+}
+
+#sidebar header {
+    background-color: FFFFFF;
+    font-size: 20px;
+    line-height: 52px;
+    text-align: center;
+}
+
+#sidebar header a {
+    color: #fff;
+    display: block;
+    text-decoration: none;
+}
+
+/* #sidebar header a:hover {
+    color: #fff;
+} */
+
+
+
+/* #sidebar .nav a {
+    background: none;
+    border-bottom: 1px solid #455A64;
+    color: #CFD8DC;
+    font-size: 14px;
+    padding: 16px 24px;
+} */
+
+#sidebar .nav a:hover {
+    background: none;
+    color: #ECEFF1;
+}
+
+#sidebar .nav a i {
+    margin-right: 16px;
+}
+
+
+
+
+
+
+small{
+    line-height: 5px;    
+    font-weight: 500;
+    font-family: Poppins;
+    border: 0px;
+    font-size: 15px;
+    color:gray;
+    padding: 0px;
+    margin: 0px;
+}
+
+li{
+    list-style: none;
+    border: 0;
+    padding: 0;
+}
+
+.colorButton {
+    display: inline-block;
+    padding: 0.2em 0.1em 0.5em;
+    font-size: 24px;
+    cursor: pointer;
+    
+    text-decoration: #ffff;
+    max-width: 220px;
+    max-height: 80px;
+    color: #fff;
+    background-color: #fff;
+    text-align: center;
+   
+    border-radius: 15px;
+    margin: 10px;
+   
+}
+
+.colorButton:hover {
+    background-color:#679dba;
+}
+
+.colorButton.active {
+    background-color: #4CBC9A;
+    box-shadow:  2px #4CBC9A;
+    text-shadow: #4CBC9A;
+   
+    
+}

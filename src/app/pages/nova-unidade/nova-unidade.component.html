@@ -1,0 +1,81 @@
+<app-side-bar></app-side-bar>
+<div class="container">
+  <div class="row">
+    <form>
+      <h3 style="max-width: 50%; margin-left: 5%">
+        Cadastro de unidade Geradora
+      </h3>
+      <!-- <form [formGroup]="formUsuario" (ngSubmit)="onSubmit()"> -->
+      <div class="form-group">
+        <label style="max-width: 50%; margin-left: 5%"> Apelido </label>
+        <input
+          type="text"
+          class="form-control inputMenor"
+          formControlName="nome"
+          name="nome"
+          id="nome"
+        />
+      </div>
+
+      <div class="form-group">
+        <label style="max-width: 50%; margin-left: 5%"> Local </label>
+        <input
+          type="text"
+          class="form-control input"
+          formControlName="usuario"
+          name="usuario"
+          id="usuario"
+        />
+      </div>
+
+      <div class="form-group">
+        <label style="max-width: 50%; margin-left: 5%"> Marca </label>
+        <input
+          type="text"
+          class="form-control input"
+          formControlName="endereco"
+          name="endereco"
+          id="endereco"
+        />
+      </div>
+
+      <div class="form-group">
+        <label style="max-width: 50%; margin-left: 5%"> Modelo </label>
+        <input
+          type="text"
+          class="form-control input"
+          formControlName="telefone"
+          name="telefone"
+          id="telefone"
+        />
+      </div>
+
+      <div class="form-check">
+        <label
+          style="max-width: 50%; margin-left: 3%"
+          class="form-check-label"
+          for="defaultCheck1"
+        >
+          Ativo
+        </label>
+        <input
+          style="max-width: 50%; margin-left: 3%"
+          class="form-check-input"
+          type="checkbox"
+          value=""
+          id="defaultCheck1"
+        />
+      </div>
+
+      <div class="form-group">
+        <button
+          type="submit"
+          class="btn btn-primary mt-3"
+          style="max-width: 50%; margin-left: 5%; margin-top: 1rem"
+        >
+          Salvar
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

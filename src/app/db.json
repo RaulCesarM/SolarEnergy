@@ -1,0 +1,36 @@
+{
+  "Unidades": [
+    {
+      "id": 1,
+      "Apelido": "Unidade 1",
+      "Local": "Jaragua do Sul",
+      "Marca": "Weg",
+      "Modelo": "Weg CFW-10",
+      "Ativo": true
+    },
+    {
+      "id": 2,
+      "Apelido": "Unidade 2",
+      "Local": "Jaragua do Sul",
+      "Marca": "Weg",
+      "Modelo": "Weg CFW-11",
+      "Ativo": true
+    },
+    {
+      "id": 3,
+      "Apelido": "Unidade 3",
+      "Local": "Jaragua do Sul",
+      "Marca": "Weg",
+      "Modelo": "Weg CFW-09",
+      "Ativo": true
+    }
+  ],
+  "User": [
+    {
+      "id": 1,
+      "username": "Admin",
+      "password": "admin"
+    }
+  ]
+ 
+}

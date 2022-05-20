@@ -1,0 +1,28 @@
+.card-header{
+    background-color: #f5f5f5;
+    text-align: center;
+}
+.card-title{
+    text-align: center;
+
+}
+
+.card .read-more:hover {
+    font-size: 14px;
+}
+
+.card:hover {
+    box-shadow: 8px 8px 8px rgb(140, 140, 182);
+    transform: scale(1.1);
+    border-color: rgb(141, 141, 218);
+    box-sizing: 0.2px solid;
+}
+
+
+.container{
+    position:absolute;
+    margin-left: 250px;
+    margin-top: 50px;
+
+}
+

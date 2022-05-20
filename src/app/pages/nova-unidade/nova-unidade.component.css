@@ -1,0 +1,27 @@
+.container {
+    position: absolute;
+    margin-left: 250px;
+    margin-top: 50px;
+
+
+}
+.btn {
+    border-radius: 15px;
+   
+    padding-right: 100px;
+   
+
+
+
+}
+
+.input{
+    max-width: 50%; 
+    margin-left: 5%;
+    margin-bottom: 1rem;
+}
+.inputMenor {
+    max-width: 25%;
+    margin-left: 5%;
+    margin-bottom: 1rem;
+}

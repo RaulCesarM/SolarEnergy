@@ -1,0 +1,53 @@
+<app-side-bar></app-side-bar>
+
+<div class="container row">
+     <div class="form-group mb-2 ">
+     
+      <input
+        [(ngModel)]="FiltroLista"
+        type="text"
+        class="form-control shadow p-2 mb-1 bg-body rounded"
+        style="max-width: 50%; margin-left: 25%; margin-top: 2rem"
+        placeholder="Pesquisar"
+      />
+    </div>
+
+<div>
+    <div >
+        <table class="table shadow-lg p-3 mb-5 bg-body rounded">
+  <thead>
+    <tr>
+      <th >#</th>
+      <th >Unidade</th>
+      <th >Localidade</th>
+      <th >Marca</th>
+      <th >Modelo</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr  *ngFor="let unidade of unidadesFiltradas">
+     
+      <td>{{unidade.id}}</td>
+      <td>{{unidade.Apelido}}</td>
+      <td>{{unidade.Local}}</td>
+      <td>{{unidade.Marca}}</td>
+      <td>{{unidade.Modelo}}</td>
+      <td>
+        <button type="button" class="btn btn-success  shadow p-1 ">Editar</button>
+      </td>
+      <td>
+       <button type="button" class="btn btn-danger  shadow p-1 ">Remover</button>
+      </td>
+      
+      
+     
+    </tr>
+  
+  </tbody>
+</table>
+   
+</div>
+
+
+
+</div>
