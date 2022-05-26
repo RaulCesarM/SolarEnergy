@@ -14,6 +14,12 @@ import { CadastroProducaoComponent } from './pages/cadastro-producao/cadastro-pr
 import { UnidadesComponent } from './pages/unidades/unidades.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { ChartsComponent } from './components/charts/charts.component';
+import { NgChartsModule } from 'ng2-charts';
+import { NgxPaginationModule } from 'ngx-pagination';
+import { ToastrModule } from 'ngx-toastr';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 
 
@@ -21,8 +27,8 @@ import { CommonModule } from '@angular/common';
 const routes: Routes = [
 
  
-  // { path: 'logon', component: LogonComponent },
-  // // { path: '**', redirectTo: '' },
+  { path: '', component: LogonComponent },
+  //{ path: '**', redirectTo: '' },
   { path: 'cadastro', component: CadastroProducaoComponent },
   { path: 'sidebar', component: SideBarComponent },
   { path: 'navbar', component: NavbarComponent },
@@ -45,18 +51,29 @@ const routes: Routes = [
     NovaUnidadeComponent,
     CadastroProducaoComponent,
     UnidadesComponent,
+    ChartsComponent,
 
 
   ],
   imports: [
+    BrowserAnimationsModule,
+    ToastrModule.forRoot({
+      timeOut: 10000,
+      progressBar: true,
+      positionClass: 'toast-top-right',
+      preventDuplicates: false,
+    }),
     CommonModule,
     BrowserModule,
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    NgChartsModule,   
+    NgxPaginationModule,    
     RouterModule.forRoot(routes)
 
   ],
+  
   providers: [],
   bootstrap: [AppComponent]
 })

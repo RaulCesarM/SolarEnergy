@@ -1,53 +1,94 @@
 <app-side-bar></app-side-bar>
+[responsive]="true"
 
 <div class="container row">
-     <div class="form-group mb-2 ">
-     
-      <input
-        [(ngModel)]="FiltroLista"
-        type="text"
-        class="form-control shadow p-2 mb-1 bg-body rounded"
-        style="max-width: 50%; margin-left: 25%; margin-top: 2rem"
-        placeholder="Pesquisar"
-      />
+  <div class="input-group mb-5 p-0">
+    <input
+      [(ngModel)]="FiltroLista"
+      type="text"
+      class="form-control shadow-lg p-2 mb-1 bg-body rounded"
+      style="max-width: 50%; margin-left: 15%; margin-top: 2rem"
+      placeholder="Pesquisar"
+    />
+    <button
+      routerLink="/AddUnit"
+      type="button"
+      style="width: 150px; margin-left: 1%; height: 40px; margin-top: 2rem"
+      class="btn shadow-lg p-1 bg-body rounded"
+    >
+      Nova Unidade
+    </button>
+    <button
+      type="button"
+      (click)="refresh()"
+      style="width: 80px; margin-left: 1%; height: 40px; margin-top: 2rem"
+      class="btn shadow-lg p-1 bg-body rounded"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="25"
+        height="25"
+        fill="currentColor"
+        class="bi bi-arrow-clockwise"
+        viewBox="0 0 16 16"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z"
+        />
+        <path
+          d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z"
+        />
+      </svg>
+    </button>
+  </div>
+
+  <div>
+    <div>
+      <table class="table shadow-lg p-2 mb-5 bg-body rounded">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Unidade</th>
+            <th>Localidade</th>
+            <th>Marca</th>
+            <th>Modelo</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr
+            *ngFor="
+              let unidade of unidadesFiltradas
+                | paginate: { itemsPerPage: contador, currentPage: pag }
+            "
+          >
+            <td>{{ unidade.id }}</td>
+            <td>{{ unidade.Apelido }}</td>
+            <td>{{ unidade.Local }}</td>
+            <td>{{ unidade.Marca }}</td>
+            <td>{{ unidade.Modelo }}</td>
+            <td>
+              <button type="button" class="btn btn-success shadow p-1">
+                Editar
+              </button>
+            </td>
+            <td>
+              <button type="button" class="btn btn-danger shadow p-1">
+                Remover
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
-
-<div>
-    <div >
-        <table class="table shadow-lg p-3 mb-5 bg-body rounded">
-  <thead>
-    <tr>
-      <th >#</th>
-      <th >Unidade</th>
-      <th >Localidade</th>
-      <th >Marca</th>
-      <th >Modelo</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr  *ngFor="let unidade of unidadesFiltradas">
-     
-      <td>{{unidade.id}}</td>
-      <td>{{unidade.Apelido}}</td>
-      <td>{{unidade.Local}}</td>
-      <td>{{unidade.Marca}}</td>
-      <td>{{unidade.Modelo}}</td>
-      <td>
-        <button type="button" class="btn btn-success  shadow p-1 ">Editar</button>
-      </td>
-      <td>
-       <button type="button" class="btn btn-danger  shadow p-1 ">Remover</button>
-      </td>
-      
-      
-     
-    </tr>
-  
-  </tbody>
-</table>
-   
-</div>
-
-
-
+  </div>
+  <div>
+    <div class="text-right fixed-bottom d-flex justify-content-center">
+      <pagination-controls
+        (pageChange)="pag = $event"
+        previousLabel="Anterior"
+        nextLabel="Próximo"
+      ></pagination-controls>
+    </div>
+  </div>
 </div>

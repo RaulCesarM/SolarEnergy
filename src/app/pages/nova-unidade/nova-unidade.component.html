@@ -1,7 +1,7 @@
 <app-side-bar></app-side-bar>
-<div class="container">
-  <div class="row">
-    <form>
+<div class="container ">
+  <div class="card shadow p-2 mb-1 bg-body rounded" style="max-width: 70%; margin-left: 8%; margin-top: 3rem">
+    <form [formGroup]="formUnidade" (ngSubmit)="onSubmit()">
       <h3 style="max-width: 50%; margin-left: 5%">
         Cadastro de unidade Geradora
       </h3>
@@ -11,9 +11,9 @@
         <input
           type="text"
           class="form-control inputMenor"
-          formControlName="nome"
-          name="nome"
-          id="nome"
+          formControlName="Apelido"
+          name="Apelido"
+          id="Apelido"
         />
       </div>
 
@@ -22,9 +22,9 @@
         <input
           type="text"
           class="form-control input"
-          formControlName="usuario"
-          name="usuario"
-          id="usuario"
+          formControlName="Local"
+          name="Local"
+          id="Local"
         />
       </div>
 
@@ -33,9 +33,9 @@
         <input
           type="text"
           class="form-control input"
-          formControlName="endereco"
-          name="endereco"
-          id="endereco"
+          formControlName="Marca"
+          name="Marca"
+          id="Marca"
         />
       </div>
 
@@ -44,9 +44,9 @@
         <input
           type="text"
           class="form-control input"
-          formControlName="telefone"
-          name="telefone"
-          id="telefone"
+          formControlName="Modelo"
+          name="Modelo"
+          id="Modelo"
         />
       </div>
 
@@ -63,7 +63,9 @@
           class="form-check-input"
           type="checkbox"
           value=""
-          id="defaultCheck1"
+          name="Ativo"
+          id="Ativo"
+          formControlName="Ativo"
         />
       </div>
 
@@ -72,10 +74,14 @@
           type="submit"
           class="btn btn-primary mt-3"
           style="max-width: 50%; margin-left: 5%; margin-top: 1rem"
+          value="Salvar"
         >
           Salvar
         </button>
+        
       </div>
     </form>
+
+     
   </div>
 </div>

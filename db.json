@@ -1,0 +1,44 @@
+{
+  "Unidades": [
+    {
+      "Apelido": "unidade 1",
+      "Local": "Jaraguá do sul",
+      "Marca": "WEG",
+      "Modelo": "CFW 11",
+      "Ativo": true,
+      "id": 1
+    },
+    {
+      "Apelido": "Unidade 2",
+      "Local": "Blumenau",
+      "Marca": "Sansung",
+      "Modelo": "S 400",
+      "Ativo": true,
+      "id": 2
+    }
+  ],
+  "User": [
+    {
+      "id": 1,
+      "username": "Admin",
+      "password": "admin"
+    }
+  ],
+  "Producao": [
+    {
+      "janeiro": 3,
+      "fevereiro": 0,
+      "marco": 21,
+      "abril": 0,
+      "maio": 0,
+      "junho": 0,
+      "julho": 0,
+      "agosto": 0,
+      "setembro": 0,
+      "outubro": 0,
+      "novembro": 0,
+      "dezembro": 4,
+      "id": 1
+    }
+  ]
+}

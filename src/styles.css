@@ -1,3 +1,7 @@
+
+@import '~ngx-toastr/toastr.css';
+
+
 html {
     overflow: hidden;
     width: 100%;

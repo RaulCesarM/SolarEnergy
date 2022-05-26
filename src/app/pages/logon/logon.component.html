@@ -25,7 +25,7 @@
 
       <p class="text-center bold">Seja bem vindo</p>
 
-      <form class="form-group ">
+      <form class="form-group "[formGroup]="formUsuario" (ngSubmit)="onSubmit()">
         <div class="input-group col-md-6 offset-md-3 d-flex justify-content-center bold" style="width: 400px">
           <span class="input-group-text border-right-0" id="basic-addon1"
             ><svg
@@ -43,14 +43,20 @@
             </svg>
           </span>
           <input
-            type="text"
+           type="email"
             class="form-control border-start-0 "
+            formControlName="email"
             placeholder="Email"
-            aria-label="Username"
-            aria-describedby="basic-addon1"
-          />
-        </div>
+             name="email"
+             />
+          
+   
+          
 
+         
+        </div>
+       
+        
         <div class="input-group col-md-6 offset-md-3 d-flex justify-content-center bold" style="width: 400px">
           <span class="input-group-text" id="basic-addon1">
             <svg
@@ -67,18 +73,23 @@
             </svg>
           </span>
           <input
-            type="text"
+          
+            type="password"
             class="form-control border-start-0"
             placeholder="Senha"
-            aria-label="Username"
-            aria-describedby="basic-addon1"
+            
+            name="password"
+           formControlName="password"
+
+
           />
         </div>
+       
 
         <div class="input-group col-md-6 offset-md-3 d-flex justify-content-center bold" style="width: 400px">
           <button
-            type="button"
-            class="btn colorButton "
+            type="submit"
+            class="btn colorButton  "
             style="margin-top: 15px; width: 400px"
           >
             Entrar

@@ -11,6 +11,7 @@
     font-size: 14px;
 }
 
+
 .card:hover {
     box-shadow: 8px 8px 8px rgb(140, 140, 182);
     transform: scale(1.1);
@@ -23,6 +24,7 @@
     position:absolute;
     margin-left: 250px;
     margin-top: 50px;
+    padding: 0px;
 
 }
 

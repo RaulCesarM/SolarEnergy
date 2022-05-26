@@ -1,6 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output,  } from '@angular/core';
+import { Router } from '@angular/router';
 import { IUnidade } from 'src/app/models/unidade.models';
-import { CrudService } from 'src/app/services/crud.service';
+import { UnidadesService } from 'src/app/services/unidades.service';
+
+
+
+
 
 @Component({
   selector: 'app-unidades',
@@ -8,17 +13,31 @@ import { CrudService } from 'src/app/services/crud.service';
   styleUrls: ['./unidades.component.css']
 })
 export class UnidadesComponent implements OnInit {
+  
 
-  public unidadesFiltradas: IUnidade[] = [];
-  public Unidades: any = [];
+  unidadesFiltradas: IUnidade[] = [];
+  Unidades: IUnidade[] = [];
   private ListaDeUnidades: string = '';
+  pag: number = 1;
+  contador: number = 5;
 
-  constructor( private unidadeservice : CrudService) { }
+  
+
+ 
+
+  constructor(private unidadeservice: UnidadesService,
+    private router: Router) {
+            }
+  
 
   ngOnInit(): void {
-    console.log('ngOnInit');
 
-    this.buscarUnidades();
+    this.unidadeservice.GetUnidades().subscribe(resposta => {
+      this.Unidades = resposta;
+      this.unidadesFiltradas = this.Unidades;
+    }); 
+    
+
   }
 
 
@@ -39,17 +58,15 @@ export class UnidadesComponent implements OnInit {
       Unidades.Apelido.toLocaleLowerCase().indexOf(FiltrarPor) !== -1
     );
   }
-
-
-  buscarUnidades() {
-    this.unidadeservice
-      .GetUnidades()
-      .subscribe((resposta: IUnidade[]) => {
-        this.Unidades = resposta;
-        this.unidadesFiltradas = this.Unidades;
-      });
+  refresh(): void {
+    this.ngOnInit();
+    this.router.navigate(['/dash']);
+    this.router.navigate(['/unidades']);
   }
-
-
-
 }
+
+
+
+
+
+

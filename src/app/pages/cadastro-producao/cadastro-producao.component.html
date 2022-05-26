@@ -1,28 +1,34 @@
 <app-side-bar></app-side-bar>
-<div class="container">
-  <div class="row">
+<div class="container row">
+  <div class="card shadow p-2 mb-1 bg-body rounded" style="max-width: 70%; margin-left: 8%; margin-top: 3rem">
     
-      <h3 style="max-width: 50%; margin-left: 5%">
+      <h3 style="max-width: 50%; margin-left: 5% ">
         Lançamento de produção de energia mensal
       </h3>
-      
-
-      <div class="form-group">
-        <label style="max-width: 15%; margin-left: 5%">Unidade Geradora</label>
-        <select class="form-control inputMenor" id="exampleFormControlSelect1">
-          <option>Unidade 1</option>
-          <option>Unidade 2</option>
-          <option>Unidade 3</option>
-          <option>Unidade 4</option>
-          <option>Unidade 5</option>
+      <form  [formGroup]="formProd" (ngSubmit)="onSubmit()">
+        <div class="form-group ">
+        <label  style="max-width: 15%; margin-left: 5%">Unidade Geradora</label>
+        <select  class="form-control inputMenor" 
+        
+        formControlName="Unidade"
+       
+         id="Unidade">
+           <option value="0" selected>Selecionar</option>     
+          <option *ngFor="let uni of Unidades" value="{{uni.Apelido}}">{{uni.Apelido}}</option>
+        
         </select>
       </div>
 
       <div class="form-group">
         <label style="max-width: 15%; margin-left: 5%"> Mês/ano </label>
         <input
-          type="date"
+         type="month"
           class="form-control inputMenor"
+          formControlName="Data"
+          name="Data"
+          id="Data"
+         [(ngModel)]="Data"
+         
          
         />
       </div>
@@ -30,8 +36,13 @@
       <div class="form-group">
         <label style="max-width: 50%; margin-left: 5%"> Total Kw gerado </label>
         <input
-          type="text"
+          type="number"
           class="form-control inputMenor"
+          
+          formControlName="TotalGerado"
+          name="TotalGerado"
+          id="TotalGerado"          
+       
         
         />
       </div>
@@ -42,10 +53,18 @@
           type="submit"
           class="btn btn-primary mt-3"
           style="max-width: 50%; margin-left: 5%; margin-top: 1rem"
+          value="Salvar"
+         
         >
          Cadastrar
         </button>
       </div>
+
+
+
+      </form>
+
+      
     
   </div>
 </div>

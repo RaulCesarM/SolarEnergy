@@ -1,7 +1,12 @@
 .container {
     position: absolute;
-    margin-left: 250px;
+    margin-left: 230px;
     margin-top: 50px;
 
 
+}
+.dir{
+    position: relative;
+    margin-left: 70%;
+    margin-bottom: 10%;
 }

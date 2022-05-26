@@ -1,36 +1,40 @@
 <app-side-bar></app-side-bar>
+<app-charts></app-charts>
 
-<div class="container row ">
+
+<div class="container row container-sm">
   <div class="col ">
-    <div class="card text-black bg-Light mb-3 shadow p-3 mb-5 bg-body rounded" style="max-width: 16rem">
+    <div class="card text-black bg-Light   shadow p-2 mb-2 bg-body rounded" style="max-width: 10rem">
       <div class="card-header">Total Unidades</div>
       <div class="card-body">
-        <h5 class="card-title">60</h5>
+        <h5 class="card-title">{{UnidadesTotal}}</h5>
       </div>
     </div>
   </div>
-   <div class="col ">
-    <div class="card text-black bg-Light mb-3 shadow p-3 mb-5 bg-body rounded" style="max-width: 16rem">
+   <div class="col p-0 ">
+    <div class="card text-black bg-Light  shadow p-2 mb-2 bg-body rounded" style="max-width: 10rem">
       <div class="card-header">Unidades Ativas</div>
       <div class="card-body">
-        <h5 class="card-title">16</h5>
+        <h5 class="card-title">{{UnidadesAtivas}}</h5>
       </div>
     </div>
   </div>
-   <div class="col">
-    <div class="card text-black bg-Light mb-3 shadow p-3 mb-5 bg-body rounded" style="max-width: 16rem">
-      <div class="card-header">Unidades inativas</div>
+   <div class="col p-0">
+    <div class="card text-black bg-Light  shadow p-2 mb-2 bg-body rounded" style="max-width: 10rem">
+      <div class="card-header">Unidades Inativas</div>
+  
       <div class="card-body">
-        <h5 class="card-title">43</h5>
+        <h5 class="card-title">{{UnidadesInativas}}</h5>
       </div>
     </div>
   </div>
-  <div class="col">
-    <div class="card text-black bg-Light mb-3 shadow p-3 mb-5 bg-body rounded" style="max-width: 16rem">
+  <div class="col p-0">
+    <div class="card text-black bg-Light shadow p-2 mb-2 bg-body rounded" style=" max-width: 10rem">
       <div class="card-header">Media de Enrgia</div>
       <div class="card-body">
-        <h5 class="card-title">64 kw</h5>
+        <h5 class="card-title">{{MediaEnergia | number : '1.0-2'  }} kw</h5>
       </div>
     </div>
   </div>
 </div>
+
