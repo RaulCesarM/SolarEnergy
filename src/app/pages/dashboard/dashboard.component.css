@@ -1,16 +1,23 @@
-.card-header{
-    background-color: #f5f5f5;
+.card-header {
+    background-color: #a3dcd2;
     text-align: center;
 }
-.card-title{
+
+.card-title {
     text-align: center;
 
 }
 
-.card .read-more:hover {
-    font-size: 14px;
-}
 
+
+.card {
+    position: relative;
+    margin-right: 0px;
+    margin-left: 0px;
+    padding: 0px;
+    width: 150px;
+
+}
 
 .card:hover {
     box-shadow: 8px 8px 8px rgb(140, 140, 182);
@@ -20,11 +27,49 @@
 }
 
 
-.container{
-    position:absolute;
+
+
+.dashposit {
+    position: absolute;
+    margin-left: -50px;
+    margin-top: -50px;
+    margin-bottom: 50px;
+    padding: 0px;
+}
+
+.col {
+    margin-left: 10px;
+    margin-top: 0px;
+    margin-right: 18px;
+    padding: 0px;
+}
+
+
+
+.container {
+    position: absolute;
     margin-left: 250px;
-    margin-top: 50px;
+    margin-top: 1px;
     padding: 0px;
 
 }
 
+.tituloPosit {
+    margin-left: 300px;
+    color: #a3dcd2;
+    font-size: 20px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+    margin-top: 10px;
+    margin-right: 0px;
+    padding: 0px;
+
+}
+
+.PositPanel {
+    margin-left: 35px;
+    margin-top: 0px;
+    margin-right: 0px;
+    padding: 0px;
+
+}

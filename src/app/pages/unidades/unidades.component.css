@@ -1,12 +1,64 @@
-.container {
-    position: absolute;
-    margin-left: 230px;
-    margin-top: 50px;
 
-
-}
 .dir{
     position: relative;
     margin-left: 70%;
     margin-bottom: 10%;
+}
+
+.tbposit{
+    position: relative;
+        margin-left: 30px;
+        margin-top: 0px;
+        padding: 0px;
+        max-width:800px;
+
+
+}
+.tcabecalho{
+    background-color: #a3dcd2;
+
+}
+.bg-body{
+    background-color: #a3dcd2;
+}
+
+.container {
+    position: absolute;
+    margin-left: 80px;
+    margin-top: 25px;
+    padding: 0px;
+
+}
+
+.tituloPosit {
+    margin-left: 300px;
+    color: #a3dcd2;
+    font-size: 20px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+    margin-top: 10px;
+    margin-right: 0px;
+    padding: 0px;
+
+}
+
+.PositPanel {
+    margin-left: 190px;
+    margin-top: 0px;
+    margin-right: 0px;
+    padding: 0px;
+
+}
+.btn-btn-remove{
+
+    border-radius: 50%;   
+    background-color:#f7aeb3 ;
+    color: black;
+   
+}
+.btn-btn{
+    border-radius: 50%;
+    background-color:#a3dcd2;    
+    color: black;
+
 }

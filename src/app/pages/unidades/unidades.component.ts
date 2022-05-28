@@ -20,6 +20,7 @@ export class UnidadesComponent implements OnInit {
   private ListaDeUnidades: string = '';
   pag: number = 1;
   contador: number = 5;
+  idEditar?: number;
 
   
 
@@ -58,11 +59,30 @@ export class UnidadesComponent implements OnInit {
       Unidades.Apelido.toLocaleLowerCase().indexOf(FiltrarPor) !== -1
     );
   }
-  refresh(): void {
-    this.ngOnInit();
-    this.router.navigate(['/dash']);
-    this.router.navigate(['/unidades']);
+
+  
+
+  ExcluirUnidade(id: number) {
+    this.unidadeservice.ExcluirUnidade(id).subscribe((resultado) => {     
+      alert('unidade excluída com sucesso');
+      this.ngOnInit();
+    });
   }
+
+  editarUnidade(id: number) {
+    
+      this.unidadeservice.setIdEdit(id);
+      this.router.navigate(['/AddUnit']);
+     
+    
+  }
+
+
+
+
+
+
+
 }
 
 

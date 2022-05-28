@@ -1,8 +1,4 @@
-.container {
-    position: absolute;
-    margin-left: 250px;
-    margin-top: 50px;
-}
+
 
 .btn {
     border-radius: 15px;
@@ -19,4 +15,50 @@
     max-width: 25%;
     margin-left: 5%;
     margin-bottom: 1rem;
+}
+
+.btn-btn {
+    border-radius: 25px;
+    background-color: #a3dcd2;
+    color: black;
+
+}
+
+.tituloPosit {
+    margin-left: 300px;
+    color: #a3dcd2;
+    font-size: 20px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+    margin-top: 10px;
+    margin-right: 0px;
+    padding: 0px;
+
+}
+
+.PositPanel {
+    margin-left: 35px;
+    margin-top: 0px;
+    margin-right: 0px;
+    padding: 0px;
+
+}
+
+.container {
+    position: absolute;
+    margin-left: 190px;
+    margin-top: 25px;
+    padding: 0px;
+
+}
+
+.positImg{
+    /* width: 150px;
+    height: 150px; */
+    margin-left: 300px;
+    margin-top: -310px;
+    
+    
+    padding: 0px;
+
 }

@@ -1,40 +1,49 @@
 <app-side-bar></app-side-bar>
+
+
+
+<div class="tituloPosit">
+<h1>Dashboard</h1>
+</div>
+<div class="dashposit">
 <app-charts></app-charts>
+</div>
 
-
-<div class="container row container-sm">
-  <div class="col ">
-    <div class="card text-black bg-Light   shadow p-2 mb-2 bg-body rounded" style="max-width: 10rem">
+<div class="PositPanel">  
+  <div class="container row container">    
+  <div class="col row-cols-sm-6  col-lg-2 ">
+    <div class="card text-black shadow rounded" >
       <div class="card-header">Total Unidades</div>
       <div class="card-body">
         <h5 class="card-title">{{UnidadesTotal}}</h5>
       </div>
     </div>
   </div>
-   <div class="col p-0 ">
-    <div class="card text-black bg-Light  shadow p-2 mb-2 bg-body rounded" style="max-width: 10rem">
+  <div class="col col-sm-12  col-lg-2 ">
+    <div class="card text-black shadow rounded" >
       <div class="card-header">Unidades Ativas</div>
       <div class="card-body">
         <h5 class="card-title">{{UnidadesAtivas}}</h5>
       </div>
     </div>
   </div>
-   <div class="col p-0">
-    <div class="card text-black bg-Light  shadow p-2 mb-2 bg-body rounded" style="max-width: 10rem">
-      <div class="card-header">Unidades Inativas</div>
-  
+   <div class="col col-sm-12  col-lg-2">
+    <div class="card text-black shadow  rounded" >
+      <div class="card-header">Unidades Inativas</div>  
       <div class="card-body">
         <h5 class="card-title">{{UnidadesInativas}}</h5>
       </div>
     </div>
   </div>
-  <div class="col p-0">
-    <div class="card text-black bg-Light shadow p-2 mb-2 bg-body rounded" style=" max-width: 10rem">
+  <div class="col col-sm-12  col-lg-2">
+    <div class="card text-black shadow  rounded" >
       <div class="card-header">Media de Enrgia</div>
       <div class="card-body">
         <h5 class="card-title">{{MediaEnergia | number : '1.0-2'  }} kw</h5>
       </div>
     </div>
   </div>
+
+</div>
 </div>
 

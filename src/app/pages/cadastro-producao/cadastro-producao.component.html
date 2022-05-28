@@ -1,8 +1,12 @@
 <app-side-bar></app-side-bar>
-<div class="container row">
+
+<div class="tituloPosit">
+<h1>Apontamento</h1>
+</div>
+<div class="container">
   <div class="card shadow p-2 mb-1 bg-body rounded" style="max-width: 70%; margin-left: 8%; margin-top: 3rem">
     
-      <h3 style="max-width: 50%; margin-left: 5% ">
+      <h3 class="tituloPosit" style="max-width: 50%; margin-left: 5% ">
         Lançamento de produção de energia mensal
       </h3>
       <form  [formGroup]="formProd" (ngSubmit)="onSubmit()">
@@ -51,7 +55,7 @@
       <div class="form-group">
         <button
           type="submit"
-          class="btn btn-primary mt-3"
+          class="btn btn-btn mt-3"
           style="max-width: 50%; margin-left: 5%; margin-top: 1rem"
           value="Salvar"
          
@@ -59,10 +63,17 @@
          Cadastrar
         </button>
       </div>
+     
+
+     
 
 
 
       </form>
+       <div class="col positImg">
+         <img src="./assets/IconeCad.PNG" alt="Cadstrar" width="310px">
+     
+      </div>
 
       
     

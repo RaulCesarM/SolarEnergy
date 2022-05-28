@@ -1,8 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { Observable } from 'rxjs';
-import { api_Registro } from 'src/app/Constants/Urls';
-import { Registro } from 'src/app/models/RegistroProd';
+import { Component, OnInit } from '@angular/core';
 import { UnidadesService } from 'src/app/services/unidades.service';
 
 
