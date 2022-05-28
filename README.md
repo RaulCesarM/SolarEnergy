@@ -1,27 +1,16 @@
 # SolarEnergy
+SolarEnergy é um projeto onde é possivel faser a manipulação de unidades de energia solar, bem como cadastrar sua produção
+o projeto foi realizado em Angular 13 [Angular CLI](https://github.com/angular/angular-cli) version 13.3.3.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.3.
+para baixa-lo devera ser feito um git clone deste repositorio
+Apos ter clonado devera realizar a atualização dos pacotes NPM com npm update
+feito isso devera ter em sua maqui o Json server, para que possa localizar o arquivo db.json
 
-## Development server
+apos esta etapas estarem concluidas
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+usar o comando `json-server --watch db.json`  sem as aspas para startar o json server
+então `ng serve -o` para startar o Angular em um nova Guia
 
-## Code scaffolding
+enjoy !!
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
