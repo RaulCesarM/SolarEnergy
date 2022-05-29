@@ -1,5 +1,6 @@
 import { Component, OnInit, Output,  } from '@angular/core';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 import { IUnidade } from 'src/app/models/unidade.models';
 import { UnidadesService } from 'src/app/services/unidades.service';
 
@@ -27,6 +28,7 @@ export class UnidadesComponent implements OnInit {
  
 
   constructor(private unidadeservice: UnidadesService,
+    private toastr: ToastrService,
     private router: Router) {
             }
   
@@ -64,7 +66,7 @@ export class UnidadesComponent implements OnInit {
 
   ExcluirUnidade(id: number) {
     this.unidadeservice.ExcluirUnidade(id).subscribe((resultado) => {     
-      alert('unidade excluída com sucesso');
+      this.showSuccess();
       this.ngOnInit();
     });
   }
@@ -75,6 +77,10 @@ export class UnidadesComponent implements OnInit {
       this.router.navigate(['/AddUnit']);
      
     
+  }
+
+  showSuccess() {
+    this.toastr.success('Unidade excluida com sucesso!', 'Excluido!');
   }
 
 

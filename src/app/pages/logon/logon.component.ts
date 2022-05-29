@@ -35,8 +35,7 @@ export class LogonComponent implements OnInit {
     if (this.formUsuario.value.email == "teste@gmail.com.br" && this.formUsuario.value.password == "123456#$%") {
 
 
-      this.formUsuario.reset();
-      this.router.navigate(['/unidades']);
+      this.formUsuario.reset();      
       this.router.navigate(['/dash']);
 
 

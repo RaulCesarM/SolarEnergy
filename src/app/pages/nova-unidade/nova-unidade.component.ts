@@ -33,10 +33,8 @@ export class NovaUnidadeComponent implements OnInit {
     this.editar();
     }else{
       this.createForm(new IUnidade())
-    }
-    
+    }    
   }
-
 
 
   createForm(UnidadePost: IUnidade) {
@@ -88,6 +86,10 @@ export class NovaUnidadeComponent implements OnInit {
       this.showError()
       this.ngOnInit();
     } else if(this.unidadeservice.getIdEdit() === 0){
+      if (this.formUnidade.value.Ativo === null){
+        this.formUnidade.value.Ativo = false;
+      }
+      
       this.postUnidade(this.formUnidade.value);
       this.showSuccess();
       this.formUnidade.reset(); 
@@ -95,9 +97,10 @@ export class NovaUnidadeComponent implements OnInit {
 
     }else if(this.unidadeservice.getIdEdit() > 0){
       this.putUnidade(this.formUnidade.value);
-      this.showSuccess();
-      this.formUnidade.reset(); 
-      this.ngOnInit();    
+      this.showEdit();
+      this.formUnidade.reset();
+      this.router.navigate(['/unidades']); 
+        
 
     }
 
@@ -108,8 +111,11 @@ export class NovaUnidadeComponent implements OnInit {
     this.unidadeservice.setIdEdit(0);
   }
 
+  showEdit() {
+    this.toastr.success('Unidade editada com sucesso!', 'Editado!');
+  }
   showSuccess() {
-    this.toastr.success('Unidade cadastrada com sucesso!', 'Sucesso!');
+    this.toastr.success('Unidade cadastrada com sucesso!', 'Cadastrado!');
   }
   showError() {
     this.toastr.error('Preencha todos os campos!', 'Erro!');
