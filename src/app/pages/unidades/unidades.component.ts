@@ -27,7 +27,8 @@ export class UnidadesComponent implements OnInit {
 
  
 
-  constructor(private unidadeservice: UnidadesService,
+  constructor(
+    private unidadeservice: UnidadesService,
     private toastr: ToastrService,
     private router: Router) {
             }
@@ -66,7 +67,7 @@ export class UnidadesComponent implements OnInit {
 
   ExcluirUnidade(id: number) {
     this.unidadeservice.ExcluirUnidade(id).subscribe((resultado) => {     
-      this.showSuccess();
+      this.showDelete();
       this.ngOnInit();
     });
   }
@@ -79,10 +80,9 @@ export class UnidadesComponent implements OnInit {
     
   }
 
-  showSuccess() {
-    this.toastr.success('Unidade excluida com sucesso!', 'Excluido!');
+  showDelete() {
+    this.toastr.success('Unidade excluida com sucesso!', 'Excluida!');
   }
-
 
 
 

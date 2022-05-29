@@ -1,11 +1,11 @@
 {
   "Unidades": [
     {
-      "Apelido": "Unidade 6",
+      "Apelido": "Unidade 69898",
       "Local": "Florianopolis",
       "Marca": "SunEdison",
       "Modelo": "SE-P270NPB-A4 - 270Watts",
-      "Ativo": false,
+      "Ativo": true,
       "id": 6
     },
     {
@@ -13,7 +13,7 @@
       "Local": "Florianopolis",
       "Marca": "Canadian Solar",
       "Modelo": "CS6K-270M - 270Watts",
-      "Ativo": true,
+      "Ativo": false,
       "id": 10
     },
     {
@@ -21,7 +21,7 @@
       "Local": "Jaraguá do sul",
       "Marca": "canadiam",
       "Modelo": "250 w",
-      "Ativo": true,
+      "Ativo": false,
       "id": 11
     },
     {
@@ -29,8 +29,16 @@
       "Local": "Blumenau",
       "Marca": "Solar",
       "Modelo": "s 450 watts",
-      "Ativo": true,
+      "Ativo": false,
       "id": 12
+    },
+    {
+      "Apelido": "teste",
+      "Local": "teste",
+      "Marca": "teste",
+      "Modelo": "teste",
+      "Ativo": false,
+      "id": 13
     }
   ],
   "User": [
