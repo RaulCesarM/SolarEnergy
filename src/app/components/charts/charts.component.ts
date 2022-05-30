@@ -43,5 +43,11 @@ export class ChartsComponent implements OnInit {
     }]
   };
 
+  mudarGrafico(){
+
+    this.ShowChart = !this.ShowChart;
+
+  }
+
  
 }

@@ -2,8 +2,16 @@
 
 <div *ngIf="ShowChart" class="chart-container shadow-lg">
   <canvas baseChart
+  (click)="mudarGrafico()"
           [data]="barChartData"
           [type]="'line'">
+  </canvas>
+</div>
+<div *ngIf="!ShowChart" class="chart-container shadow-lg">
+  <canvas baseChart
+  (click)="mudarGrafico()"
+          [data]="barChartData"
+          [type]="'bar'">
   </canvas>
 </div>
 
