@@ -33,12 +33,60 @@
       "id": 12
     },
     {
-      "Apelido": "teste",
-      "Local": "teste",
-      "Marca": "teste",
-      "Modelo": "teste",
-      "Ativo": false,
+      "Apelido": "Unidade 44",
+      "Local": "Blumenau",
+      "Marca": "Solar",
+      "Modelo": "S450 -Watts",
+      "Ativo": true,
       "id": 13
+    },
+    {
+      "Apelido": "Unidade 46",
+      "Local": "Blumenau",
+      "Marca": "JA Solar",
+      "Modelo": "JAM6FA/60 265-285W",
+      "Ativo": false,
+      "id": 14
+    },
+    {
+      "Apelido": "Unidade 307",
+      "Local": "Joinville ",
+      "Marca": "Canadian",
+      "Modelo": " 325W",
+      "Ativo": true,
+      "id": 15
+    },
+    {
+      "Apelido": "Unidade 789",
+      "Local": "Lages",
+      "Marca": "GCL",
+      "Modelo": "456 w",
+      "Ativo": true,
+      "id": 16
+    },
+    {
+      "Apelido": "Unidade 159",
+      "Local": "Lages",
+      "Marca": "Hanwha Q-Cells",
+      "Modelo": "789 w",
+      "Ativo": true,
+      "id": 17
+    },
+    {
+      "Apelido": "Unidade Londres",
+      "Local": "Londres",
+      "Marca": " Yingli Green",
+      "Modelo": "yg 56 w",
+      "Ativo": false,
+      "id": 18
+    },
+    {
+      "Apelido": "Unidade 236",
+      "Local": "Brasilia",
+      "Marca": "Jinko Solar",
+      "Modelo": "JS 567 W",
+      "Ativo": true,
+      "id": 19
     }
   ],
   "User": [
@@ -50,17 +98,17 @@
   ],
   "Producao": [
     {
-      "janeiro": 50,
-      "fevereiro": 250,
-      "marco": 100,
-      "abril": 150,
-      "maio": 100,
-      "junho": 100,
-      "julho": 300,
-      "agosto": 150,
-      "setembro": 100,
+      "janeiro": 250,
+      "fevereiro": 0,
+      "marco": 0,
+      "abril": 0,
+      "maio": 0,
+      "junho": 0,
+      "julho": 0,
+      "agosto": 0,
+      "setembro": 0,
       "outubro": 0,
-      "novembro": 150,
+      "novembro": 0,
       "dezembro": 0,
       "id": 1
     }

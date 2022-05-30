@@ -14,7 +14,7 @@
     margin-right: 0px;
     margin-left: 0px;
     padding: 0px;
-    width: 150px;
+    width: 140px;
 
 }
 
@@ -39,7 +39,7 @@
 .col {
     margin-left: 10px;
     margin-top: 0px;
-    margin-right: 18px;
+    margin-right: 2px;
     padding: 0px;
 }
 
@@ -71,4 +71,8 @@
     margin-right: 0px;
     padding: 0px;
 
+}
+.col-lg-2{
+    padding: 0px;
+    margin: 0px;
 }

@@ -12,6 +12,7 @@ export class DashboardComponent implements OnInit {
   UnidadesTotal!: number;
   UnidadesInativas!: number; 
   MediaEnergia!: number;
+  MediaEnergiaAtivas!: number;
   TotalKilowatts!: number;
 
   constructor(private unidadeservice: UnidadesService) { }
@@ -44,6 +45,8 @@ export class DashboardComponent implements OnInit {
         console.log(soma);
       }
       let med = (soma / this.UnidadesAtivas)
+      this.MediaEnergiaAtivas = med;
+      med = (soma / 12)
       this.MediaEnergia = med;
     });
     

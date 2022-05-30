@@ -39,7 +39,7 @@ export class ChartsComponent implements OnInit {
       fill: true,
       borderColor: '#000',
       pointBorderColor: '#000',
-      tension: 0.4
+      tension: 0.2
     }]
   };
 

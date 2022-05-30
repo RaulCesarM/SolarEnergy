@@ -6,40 +6,50 @@
 <h1>Dashboard</h1>
 </div>
 <div class="dashposit">
-<app-charts></app-charts>
+<app-charts class="col row-cols-sm-2  col-lg-2 "></app-charts>
 </div>
 
 <div class="PositPanel">  
   <div class="container row container">    
-  <div class="col row-cols-sm-6  col-lg-2 ">
+  <div class="col row-cols-sm-4  col-lg-2 ">
     <div class="card text-black shadow rounded" >
       <div class="card-header">Total Unidades</div>
       <div class="card-body">
-        <h5 class="card-title">{{UnidadesTotal}}</h5>
+        <h6 class="card-title">{{UnidadesTotal}}</h6>
       </div>
     </div>
   </div>
-  <div class="col col-sm-12  col-lg-2 ">
+  <div class="col col-sm-4  col-lg-2 ">
     <div class="card text-black shadow rounded" >
       <div class="card-header">Unidades Ativas</div>
       <div class="card-body">
-        <h5 class="card-title">{{UnidadesAtivas}}</h5>
+        <h6 class="card-title">{{UnidadesAtivas}}</h6>
+      </div>
+    </div>
+  </div>
+   <div class="col col-sm-4  col-lg-2">
+    <div class="card text-black shadow  rounded" >
+      <div class="card-header">Unidades Inativas</div>  
+      <div class="card-body">
+        <h6 class="card-title">{{UnidadesInativas}}</h6>
+      </div>
+    </div>
+  </div>
+  <div class="col col-sm-4  col-lg-2">
+    <div class="card text-black shadow  rounded" >
+      <div class="card-header">Media /mes</div>
+      <div class="card-body">
+        <h6 class="card-title">{{MediaEnergia | number : '1.0-2'  }} kw/mes</h6>
+      
       </div>
     </div>
   </div>
    <div class="col col-sm-12  col-lg-2">
     <div class="card text-black shadow  rounded" >
-      <div class="card-header">Unidades Inativas</div>  
+      <div class="card-header">Media /ativas</div>
       <div class="card-body">
-        <h5 class="card-title">{{UnidadesInativas}}</h5>
-      </div>
-    </div>
-  </div>
-  <div class="col col-sm-12  col-lg-2">
-    <div class="card text-black shadow  rounded" >
-      <div class="card-header">Media de Energia</div>
-      <div class="card-body">
-        <h5 class="card-title">{{MediaEnergia | number : '1.0-2'  }} kw</h5>
+       
+        <h6 class="card-title">{{MediaEnergiaAtivas | number : '1.0-2'  }} kw/Ativas</h6>
       </div>
     </div>
   </div>
