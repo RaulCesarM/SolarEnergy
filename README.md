@@ -8,6 +8,8 @@ feito isso devera ter em sua maquina o repositorio do back-end https://github.co
 Apos ter feito as demais etapas usar o comando `ng serve -o` para abri o projeto do front en em uma nova janela..
 Duvidas contatar-me raulcesardesenvolvimento@gmail.com
 
+Login teste@gmail.com.br
+Senha 123456#$%
 enjoy !!
 
 
