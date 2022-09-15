@@ -5,21 +5,21 @@
 </div>
 <div class="container">
   <div class="card shadow p-2 mb-1 bg-body rounded" style="max-width: 70%; margin-left: 8%; margin-top: 3rem">
-    
+
       <h3 class="tituloPosit" style="max-width: 50%; margin-left: 5% ">
         Lançamento de produção de energia mensal
       </h3>
       <form  [formGroup]="formProd" (ngSubmit)="onSubmit()">
         <div class="form-group ">
         <label  style="max-width: 15%; margin-left: 5%">Unidade Geradora</label>
-        <select  class="form-control inputMenor" 
-        
+        <select  class="form-control inputMenor"
+
         formControlName="Unidade"
-       
+
          id="Unidade">
-           <option value="0" selected>Selecionar</option>     
-          <option *ngFor="let uni of Unidades" value="{{uni.Apelido}}">{{uni.Apelido}}</option>
-        
+           <option value="0" selected>Selecionar</option>
+          <option *ngFor="let uni of Unidades" value="{{uni.apelido}}">{{uni.apelido}}</option>
+
         </select>
       </div>
 
@@ -31,9 +31,9 @@
           formControlName="Data"
           name="Data"
           id="Data"
-         [(ngModel)]="Data"
-         
-         
+         [(ngModel)]="data"
+
+
         />
       </div>
 
@@ -42,12 +42,12 @@
         <input
           type="number"
           class="form-control inputMenor"
-          
+
           formControlName="TotalGerado"
           name="TotalGerado"
-          id="TotalGerado"          
-       
-        
+          id="TotalGerado"
+
+
         />
       </div>
 
@@ -58,24 +58,24 @@
           class="btn btn-btn mt-3"
           style="max-width: 50%; margin-left: 5%; margin-top: 1rem"
           value="Salvar"
-         
+
         >
          Cadastrar
         </button>
       </div>
-     
 
-     
+
+
 
 
 
       </form>
        <div class="col positImg">
          <img src="./assets/IconeCad.PNG" alt="Cadstrar" width="310px">
-     
+
       </div>
 
-      
-    
+
+
   </div>
 </div>

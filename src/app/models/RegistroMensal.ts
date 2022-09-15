@@ -1,6 +1,6 @@
-export class Registro{
- 
- janeiro: number =0;
+export class RegistroMensal{
+  idRegistro: number =0;
+    janeiro: number =0;
     fevereiro: number =0;
     marco: number =0;
     abril: number =0;
@@ -12,6 +12,6 @@ export class Registro{
     outubro: number =0;
     novembro: number =0;
     dezembro: number =0;
-  
-   
+
+
 }

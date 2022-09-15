@@ -10,7 +10,7 @@ import { UnidadesService } from 'src/app/services/unidades.service';
 })
 export class ChartsComponent implements OnInit {
   Balance?: any;
-  ShowChart = false; 
+  ShowChart = false;
 
     constructor(private http: HttpClient,
       private unidadeService: UnidadesService ) { }
@@ -21,16 +21,16 @@ export class ChartsComponent implements OnInit {
       const dataLabel: any[] = [];
       let vetor = Object.values(response);
       let labelVetor = Object.keys(response);
-      for (let i = 0; i < vetor.length -1; i++) {
-       dataArray.push(vetor[i] as any); 
-        dataLabel.push(labelVetor[i] as any);     
+      for (let i = 1; i < vetor.length ; i++) {
+       dataArray.push(vetor[i] as any);
+        dataLabel.push(labelVetor[i] as any);
       }
       this.barChartData.datasets[0].data = dataArray;
       this.barChartData.labels = dataLabel;
       this.ShowChart = true;
     });
   }
- 
+
   barChartData = {
     labels: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
     datasets: [{
@@ -49,5 +49,5 @@ export class ChartsComponent implements OnInit {
 
   }
 
- 
+
 }

@@ -14,7 +14,7 @@ import { UnidadesService } from 'src/app/services/unidades.service';
   styleUrls: ['./unidades.component.css']
 })
 export class UnidadesComponent implements OnInit {
-  
+
 
   unidadesFiltradas: IUnidade[] = [];
   Unidades: IUnidade[] = [];
@@ -23,24 +23,25 @@ export class UnidadesComponent implements OnInit {
   contador: number = 5;
   idEditar?: number;
 
-  
 
- 
+
+
 
   constructor(
     private unidadeservice: UnidadesService,
     private toastr: ToastrService,
     private router: Router) {
             }
-  
+
 
   ngOnInit(): void {
 
     this.unidadeservice.GetUnidades().subscribe(resposta => {
       this.Unidades = resposta;
       this.unidadesFiltradas = this.Unidades;
-    }); 
-    
+
+    });
+
 
   }
 
@@ -58,26 +59,27 @@ export class UnidadesComponent implements OnInit {
 
   filtrarItens(FiltrarPor: string): any {
     FiltrarPor = FiltrarPor.toLocaleLowerCase();
-    return this.Unidades.filter((Unidades: { Apelido: string }) =>
-      Unidades.Apelido.toLocaleLowerCase().indexOf(FiltrarPor) !== -1
+    return this.Unidades.filter((Unidades: { apelido: string }) =>
+      Unidades.apelido.toLocaleLowerCase().indexOf(FiltrarPor) !== -1
+
     );
   }
 
-  
+
 
   ExcluirUnidade(id: number) {
-    this.unidadeservice.ExcluirUnidade(id).subscribe((resultado) => {     
+    this.unidadeservice.ExcluirUnidade(id).subscribe((resultado) => {
       this.showDelete();
       this.ngOnInit();
     });
   }
 
   editarUnidade(id: number) {
-    
+
       this.unidadeservice.setIdEdit(id);
       this.router.navigate(['/AddUnit']);
-     
-    
+
+
   }
 
   showDelete() {

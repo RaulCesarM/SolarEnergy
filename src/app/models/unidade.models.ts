@@ -1,11 +1,11 @@
 export class IUnidade {
     id!: number;
-    Apelido: string = "";
-    Local: string = "";
-    Marca: string = "";
-    Modelo: string = "";
-    Ativo!: boolean;
- 
+    apelido: string = "";
+    local: string = "";
+    marca: string = "";
+    modelo: string= ""; ;
+    ativo!: boolean;
+
 
 
 }

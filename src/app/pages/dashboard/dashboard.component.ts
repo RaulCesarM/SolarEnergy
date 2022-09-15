@@ -10,7 +10,7 @@ export class DashboardComponent implements OnInit {
   Unidades: IUnidade[] = [];
   UnidadesAtivas: number =0;
   UnidadesTotal!: number;
-  UnidadesInativas!: number; 
+  UnidadesInativas!: number;
   MediaEnergia!: number;
   MediaEnergiaAtivas!: number;
   TotalKilowatts!: number;
@@ -18,21 +18,21 @@ export class DashboardComponent implements OnInit {
   constructor(private unidadeservice: UnidadesService) { }
 
   ngOnInit(): void {
-    this.MediaEnergia = 0;; 
+    this.MediaEnergia = 0;;
     this.showUnits();
-    this.showBalance(); 
-    
+    this.showBalance();
+
   }
 
   showUnits(){
     this.unidadeservice.GetUnidades().subscribe(resposta => {
       this.Unidades = resposta;
-      this.UnidadesAtivas = this.Unidades.filter((Unidades:  { Ativo: boolean }) => Unidades.Ativo === true).length;
+      this.UnidadesAtivas = this.Unidades.filter((Unidades:  { ativo: boolean }) => Unidades.ativo === true).length;
       this.UnidadesInativas = (this.Unidades.length - this.UnidadesAtivas);
       this.UnidadesTotal = this.Unidades.length;
-      
+
     });
-    
+
   }
 
   showBalance(){
@@ -49,7 +49,7 @@ export class DashboardComponent implements OnInit {
       med = (soma / 12)
       this.MediaEnergia = med;
     });
-    
+
   }
 
 }

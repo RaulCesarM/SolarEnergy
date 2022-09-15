@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Registro } from '../models/RegistroProd';
+import { RegistroMensal } from '../models/RegistroMensal';
 
 
 @Injectable({
@@ -7,55 +7,56 @@ import { Registro } from '../models/RegistroProd';
 })
 export class TransformService {
 
-  Data: String = "";
+  data: String = "";
   valorDomes!: number;
-  Mensal!: Registro;
+  mensal!: RegistroMensal;
+  idRegistro!:number;
 
 
   constructor() { }
 
   setData(Data: String) {
-    this.Data = Data;
+    this.data = Data;
   }
 
-  setValorDomes(valorDomes: number) {
-    this.valorDomes = valorDomes;
+  setValorDomes(ValorDomes: number) {
+    this.valorDomes = ValorDomes;
   }
 
 
 
-  transform(): Registro {
-   
-    const Mes = this.Data.substring(5, 7);
+  transform(): RegistroMensal {
+
+    const Mes = this.data.substring(5, 7);
 
     if (Mes === "01") {
-      this.Mensal.janeiro +=  this.valorDomes;
+      this.mensal.janeiro +=  this.valorDomes;
     } else if (Mes === "02") {
-      this.Mensal.fevereiro +=  this.valorDomes;
+      this.mensal.fevereiro +=  this.valorDomes;
     } else if (Mes === "03") {
-      this.Mensal.marco += this.valorDomes;
+      this.mensal.marco += this.valorDomes;
     } else if (Mes === "04") {
-      this.Mensal.abril +=  this.valorDomes;
+      this.mensal.abril +=  this.valorDomes;
     } else if (Mes === "05") {
-      this.Mensal.maio +=  this.valorDomes;
+      this.mensal.maio +=  this.valorDomes;
     } else if (Mes === "06") {
-      this.Mensal.junho +=  this.valorDomes;
+      this.mensal.junho +=  this.valorDomes;
     } else if (Mes === "07") {
-      this.Mensal.julho += this.valorDomes;
+      this.mensal.julho += this.valorDomes;
     } else if (Mes === "08") {
-      this.Mensal.agosto +=  this.valorDomes;
+      this.mensal.agosto +=  this.valorDomes;
     } else if (Mes === "09") {
-      this.Mensal.setembro +=  this.valorDomes;
+      this.mensal.setembro +=  this.valorDomes;
     } else if (Mes === "10") {
-     this.Mensal.outubro +=  this.valorDomes;
+      this.mensal.outubro +=  this.valorDomes;
     } else if (Mes === "11") {
-      this.Mensal.novembro +=  this.valorDomes;
+      this.mensal.novembro +=  this.valorDomes;
     } else if (Mes === "12") {
-      this.Mensal.dezembro +=  this.valorDomes;
-    }   
-   
-    return this.Mensal;
-   
+      this.mensal.dezembro +=  this.valorDomes;
+    }
+    this.mensal.idRegistro = 2;
+    return this.mensal;
+
   }
 
 }

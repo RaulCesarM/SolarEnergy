@@ -26,7 +26,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 const routes: Routes = [
 
- 
+
   { path: '', component: LogonComponent },
   //{ path: '**', redirectTo: '' },
   { path: 'cadastro', component: CadastroProducaoComponent },
@@ -35,7 +35,7 @@ const routes: Routes = [
   { path: 'dash', component: DashboardComponent },
   { path: 'unidades', component: UnidadesComponent },
   { path: 'AddUnit', component: NovaUnidadeComponent },
- 
+
 
 
 ];
@@ -68,12 +68,12 @@ const routes: Routes = [
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    NgChartsModule,   
-    NgxPaginationModule,    
+    NgChartsModule,
+    NgxPaginationModule,
     RouterModule.forRoot(routes)
 
   ],
-  
+
   providers: [],
   bootstrap: [AppComponent]
 })
